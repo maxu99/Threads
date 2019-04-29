@@ -1,12 +1,16 @@
 package UTN.controladores;
 
+import UTN.clases.Connect;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public final class CJugar {
    private static boolean intento = true;
+   private static String palabra=  Connect.extraerPalabra();
     private static List<String> palabrita;
     private static boolean ejecucion = true;
+
     public static synchronized int Jugar(String palabra,String letra){
             if(palabrita== null){
                 palabrita=palabracomolista(palabra);
@@ -53,5 +57,13 @@ public final class CJugar {
 
     public static void setIntento(boolean intento) {
         CJugar.intento = intento;
+    }
+
+    public static String getPalabra() {
+        return palabra;
+    }
+
+    public static void setPalabra(String palabra) {
+        CJugar.palabra = palabra;
     }
 }

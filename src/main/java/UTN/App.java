@@ -1,5 +1,6 @@
 package UTN;
 
+import UTN.clases.Connect;
 import UTN.clases.Jugador;
 
 import java.util.ArrayList;
@@ -17,8 +18,7 @@ public class App {
         j.start();
         j2.start();
 
-        //String[] letras= {"a", "b", "a", "c"};
-        //letras= Arrays.asList(new String("a"),new String("b"),new String("a"));
+
 
 
 
