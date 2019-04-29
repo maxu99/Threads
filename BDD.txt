@@ -1,0 +1,17 @@
+create database hilos;
+use hilos;
+
+create table palabras(
+ id_palabra int auto_increment,
+ palabra Varchar(50),
+ constraint pk_palabras primary key(id_palabra)
+);
+
+create table ganadores(
+ id_ganador int auto_increment,
+ fecha varchar(50),
+ nombre Varchar(50),
+ palabra int,
+ constraint pk_ganadores primary key(id_ganador),
+ constraint fk_ganadores_palabras foreign key(palabra) references palabras(id_palabra)
+);

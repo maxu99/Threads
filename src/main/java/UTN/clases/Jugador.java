@@ -53,7 +53,7 @@ public class Jugador extends Thread {
                 this.ganador=true;
             }
             if(this.ganador){
-                Connect.insert("INSERT INTO ganadores (fecha,nombre,palabra) VALUES ('" + fecha+ "',' " +this.getName() + "',' " + palabra + "')");
+                Connect.insert("INSERT INTO ganadores (fecha,nombre,palabra) VALUES ('" + fecha+ "',' " +this.getName() + "', " + "(Select id_palabra from palabras where palabra = '" +palabra+"'))");
             }
 
     }
